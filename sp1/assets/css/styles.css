@@ -1,3 +1,8 @@
+:root {
+    --primary: #3366cc;
+    --secondary: #254e99;
+    --dark: #333333;
+}
 
 *{
     box-sizing: border-box;
@@ -10,11 +15,12 @@ html, body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    color: var(--dark);
 }
 
 .nav-wrap {
     position: sticky;
-    background-color: #3366cc;
+    background-color: var(--primary);
     box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.3);
 }
 
@@ -55,7 +61,7 @@ html, body {
     padding: 1rem 2rem;
     border-radius: 5px;
     color: white;
-    background-color: #3366cc;
+    background-color: var(--primary);
     text-decoration: none;
     font-weight: bold;
     transition: background-color 0.2s;
@@ -69,12 +75,12 @@ html, body {
 }
 
 .nav__link:hover {
-    background-color: #254e99;
+    background-color: var(--secondary);
     transition-delay: 0,2s;
 }
 
 .nav__link.active {
-    background-color: #254e99;
+    background-color: var(--secondary);
     border-radius: 5px;
 }
 
@@ -167,7 +173,7 @@ main {
 }
 
 .sub-nav ul li a:hover {
-    background-color: #254e99;
+    background-color: var(--secondary);
     transition-delay: 0,2s;
 }
 
@@ -176,7 +182,7 @@ main {
 }
 
 footer {
-    background-color: #333;
+    background-color: var(--dark);
     color: #fff;
     text-align: center;
 }
@@ -213,7 +219,7 @@ font-size: 0.9em
 
 .members h2 {
     font-size: 2em;
-    color: #3366cc;
+    color: var(--primary);
     margin-bottom: 10px;
 }
 
@@ -224,7 +230,7 @@ font-size: 0.9em
 
 .members ul li {
     padding: 10px 0;
-    color:#333;
+    color: var(--dark);
     border-bottom: 1px solid #ddd;
 }
 
@@ -250,13 +256,13 @@ font-size: 0.9em
 .blog-title {
     font-size: 2em;
     margin-bottom: 10px;
-    color: #333;
+    color: var(--dark);
 }
 
 .blog-text {
     font-size: 1.2em;
     line-height: 1.6;
-    color: #333;
+    color: var(--dark);
 }
 
 .contact-section, .members-section {
@@ -284,7 +290,7 @@ font-size: 0.9em
 }
 
 .contact-info p {
-    color: #333;
+    color: var(--dark);
 }
 
 .map-container {
@@ -324,7 +330,7 @@ font-size: 0.9em
     transition: background-color 0.3s;
 }
 .button:hover {
-    background-color: #254e99;
+    background-color: var(--secondary);
     transition-delay: 0,1s;
 }
 
