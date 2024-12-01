@@ -49,8 +49,8 @@ html, body {
 
 @media (max-width:768px) {
     .nav__items {
-        flex-direction: column;
-        gap: 0.5rem;
+        margin: 0.75rem 0;
+        gap: 0;
     }
 }
 
@@ -64,6 +64,7 @@ html, body {
 @media (max-width:768px) {
     .nav__item {
         width: 100%;
+        font-size: small;
     }
 }
 
@@ -81,6 +82,7 @@ html, body {
 @media (max-width:768px) {
     .nav__link  {
         width: 100%;
+        padding: 1rem 0;
     }
 }
 
@@ -135,14 +137,13 @@ main {
     justify-content: flex-start;
 }
 
+
 .sub-nav {
     flex-grow: 1; 
     display: flex;
     align-items: stretch;
     justify-content: center;
     padding: 10px 0;
-    height: 100%;
-    width: 100%;
 }
 
 .sub-nav ul {
@@ -150,18 +151,17 @@ main {
     padding: 0;
     margin: 0;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
     width: 100%;
 }
 
 .sub-nav ul li {
-    flex: 1 1 calc(25% - 20px); ;
     display: flex;
-    align-items: center;
     justify-content: center;
-    margin: 0 10px;
-    height: 80%;
+    margin: 10px;
+    width: 90%;
 }
 
 .sub-nav ul li a {
@@ -169,8 +169,7 @@ main {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-color: #007bff;
-    background: linear-gradient(45deg, #007bff, #0056b3);
+    background: linear-gradient(to right, #007bff, #3366cc);
     text-decoration: none;
     color: white;
     font-size: 2.5em;
@@ -178,13 +177,12 @@ main {
     padding: 20px;
     border-radius: 50px;
     transition: background-color 0.3s ease;
-    height: 100%;
     width: 100%;
 }
 
 .sub-nav ul li a:hover {
-    background-color: var(--secondary);
-    transition-delay: 0,2s;
+    background: linear-gradient(to right, #3366cc, #254e99);
+    transform: scale(1.01);
 }
 
 .sub-nav ul li a:active {
@@ -236,6 +234,7 @@ font-size: 0.9em
 .members ul {
     list-style-type: none;
     padding: 0;
+    column-count: 3;
 }
 
 .members ul li {
@@ -281,6 +280,13 @@ font-size: 0.9em
     gap: 20px;
     padding: 20px;
     margin-top: 10px;
+}
+
+@media (max-width:768px) {
+    .contact-section {
+        flex-direction: column;
+        height: 100vh;
+    }
 }
 
 .contact-info {
@@ -344,7 +350,7 @@ font-size: 0.9em
     transition-delay: 0,1s;
 }
 
-@media (max-width:800px) {
+/*@media (max-width:800px) {
     .members-image {
         width: 70%;
     }
@@ -356,17 +362,11 @@ font-size: 0.9em
     }
 }
 
-@media (max-width:800px) {
+@media (max-width: 1400px) {
     .members-image {
-        width: 70%;
+        width: 90%;
     }
-}
-
-@media (max-height: 600px) {
-    .members-image {
-        width: 70%; 
-    }
-}
+}*/
 
 @media print {
     footer, header {
