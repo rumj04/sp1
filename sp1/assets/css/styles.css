@@ -58,7 +58,7 @@ header nav ul li a.active {
     border-radius: 5px;
 }
 
-.header-image {
+.hero {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -69,19 +69,27 @@ header nav ul li a.active {
     color: white;
 }
 
-#homepage {
+.hero--homepage {
     height: 48vh;
 }
 
-.header-image h1 {
-    font-size: 4em;
+.hero h1 {
+    padding: 2rem 4rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    font-size: 4rem;
     color: white;
-    background-color: rgba(55, 52, 52, 0.5);
-    padding: 5px;
     border-radius: 20px;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
     text-align: center;
-    
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+@media (max-width:800px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
 }
 
 main {
