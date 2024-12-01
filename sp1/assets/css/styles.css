@@ -4,9 +4,12 @@
     --dark: #333333;
 }
 
-*{
-    box-sizing: border-box;
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
 }
+
 
 html, body {
     margin: 0;
