@@ -1,7 +1,15 @@
-
-*{
-    box-sizing: border-box;
+:root {
+    --primary: #3366cc;
+    --secondary: #254e99;
+    --dark: #333333;
 }
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
 
 html, body {
     margin: 0;
@@ -10,55 +18,83 @@ html, body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    color: var(--dark);
 }
 
-header {
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px !important;
+        margin-inline: auto;
+    }   
+}
+
+.nav-wrap {
     position: sticky;
-    background-color: #3366cc;
+    background-color: var(--primary);
     box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.3);
 }
 
-nav {
+.nav {
     width: 100%;
 }
 
-nav ul {
+.nav__items {
+    padding: 0;
+    margin: 0.75rem;
     list-style-type: none;
     display: flex;
-    justify-content: space-between;
-    gap: 20px;
+    align-items: center;
+    gap: 1rem;
 }
 
-nav ul li {
-    list-style-type: none;
+@media (max-width:768px) {
+    .nav__items {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+.nav__item {
     flex: 1;
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: space-around;
 }
 
-nav ul li a {
-    color: white;
-    background-color: #3366cc;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 10px;
-    transition: background-color 0.2s;
+@media (max-width:768px) {
+    .nav__item {
+        width: 100%;
+    }
 }
 
-nav ul li a:hover {
-    background-color: #254e99;
+.nav__link {
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    color: white;
+    background-color: var(--primary);
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.2s;
+    text-align: center;
+}
+
+@media (max-width:768px) {
+    .nav__link  {
+        width: 100%;
+    }
+}
+
+.nav__link:hover {
+    background-color: var(--secondary);
     transition-delay: 0,2s;
 }
 
-header nav ul li a.active {
-    background-color: #254e99;
+.nav__link.active {
+    background-color: var(--secondary);
     border-radius: 5px;
 }
 
-.header-image {
+.hero {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -69,19 +105,27 @@ header nav ul li a.active {
     color: white;
 }
 
-#homepage {
+.hero--homepage {
     height: 48vh;
 }
 
-.header-image h1 {
-    font-size: 4em;
+.hero__title {
+    padding: 2rem 4rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    font-size: 4rem;
     color: white;
-    background-color: rgba(55, 52, 52, 0.5);
-    padding: 5px;
     border-radius: 20px;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
     text-align: center;
-    
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+@media (max-width:768px) {
+    .hero__title {
+        font-size: 2.5rem;
+    }
 }
 
 main {
@@ -139,7 +183,7 @@ main {
 }
 
 .sub-nav ul li a:hover {
-    background-color: #254e99;
+    background-color: var(--secondary);
     transition-delay: 0,2s;
 }
 
@@ -148,7 +192,7 @@ main {
 }
 
 footer {
-    background-color: #333;
+    background-color: var(--dark);
     color: #fff;
     text-align: center;
 }
@@ -161,7 +205,7 @@ footer p {
 .intro {
     background-color: #f9f9f9;
     border-radius: 20px;
-    margin: 20px;
+    margin-block: 20px;
     box-shadow: 3px 6px 12px rgba(0, 0, 0, 0.2);
     line-height: 1.6;
     font-size: 1.2em;
@@ -185,7 +229,7 @@ font-size: 0.9em
 
 .members h2 {
     font-size: 2em;
-    color: #3366cc;
+    color: var(--primary);
     margin-bottom: 10px;
 }
 
@@ -196,7 +240,7 @@ font-size: 0.9em
 
 .members ul li {
     padding: 10px 0;
-    color:#333;
+    color: var(--dark);
     border-bottom: 1px solid #ddd;
 }
 
@@ -222,13 +266,13 @@ font-size: 0.9em
 .blog-title {
     font-size: 2em;
     margin-bottom: 10px;
-    color: #333;
+    color: var(--dark);
 }
 
 .blog-text {
     font-size: 1.2em;
     line-height: 1.6;
-    color: #333;
+    color: var(--dark);
 }
 
 .contact-section, .members-section {
@@ -256,7 +300,7 @@ font-size: 0.9em
 }
 
 .contact-info p {
-    color: #333;
+    color: var(--dark);
 }
 
 .map-container {
@@ -296,7 +340,7 @@ font-size: 0.9em
     transition: background-color 0.3s;
 }
 .button:hover {
-    background-color: #254e99;
+    background-color: var(--secondary);
     transition-delay: 0,1s;
 }
 
