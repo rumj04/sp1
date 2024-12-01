@@ -21,6 +21,13 @@ html, body {
     color: var(--dark);
 }
 
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px !important;
+        margin-inline: auto;
+    }   
+}
+
 .nav-wrap {
     position: sticky;
     background-color: var(--primary);
@@ -198,7 +205,7 @@ footer p {
 .intro {
     background-color: #f9f9f9;
     border-radius: 20px;
-    margin: 20px;
+    margin-block: 20px;
     box-shadow: 3px 6px 12px rgba(0, 0, 0, 0.2);
     line-height: 1.6;
     font-size: 1.2em;
